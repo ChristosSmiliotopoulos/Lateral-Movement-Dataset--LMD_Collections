@@ -14,3 +14,18 @@ As shown in the highlighted box that follows, the LMD-2022 corpus comprises four
 		- FullSet 870,000 (LNT, EoRS, EoHT)
     
 ## LMD-2023
+
+For the needs of this work, the LMD-2022 logset was enhanced with both normal and malicious traffic collected from various personal and virtual machine (VM) computing stations. Precisely, the already existing nine LM techniques were re-executed multiple times and populated with six more up-to-date state-of-the-art LM techniques, which correspond to Common Vulnerabilities and Exposures (CVEs) IDs issued from 2020 until today. As shown in the highlighted box that follows, , the added attacks (those having an asterisk affixed) include * *Log4Shell* * , * *Follina* * , * *Windows Spooler Privilege Escalation* * , * *SMBGhost* * , * *SMBleed* * , and * *Zerologon* * , each of them executed multiple times.
+
+		- ms17-010 **CVE-2017-0148 (EoRS)**
+		- EternalBlue **CVE-2017-0144 & EoRS**
+		- Bluekeep **CVE-2019-0708 & EoRS**
+		- WannaCry **CVE-2017-0143, CVE-2017-0145, CVE-2017-0146 & EoRS**
+		- Mimikatz (EoHT) **CVE-2021-36934 & EoHT**
+		- LaZagne Project **CVE-2021-40444 & EoHT**
+		- Log4Shell **CVE-2020-1472, CVE-2021-44228 & EoRS**
+		- Follina **CVE-2022-30190 & EoRS**
+		- Windows Spooler Privilege Escalation **CVE-2022-29104 & EoRS**
+		- SMBGhost **CVE-2020-0796 & EoRS**
+		- SMBleed **CVE-2020-1206 & EoRS**
+		- Zerologon **CVE-2020-1472 & EoRS**
