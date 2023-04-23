@@ -15,7 +15,7 @@ As shown in the highlighted box that follows, the LMD-2022 corpus comprises four
     
 ## LMD-2023
 
-For the needs of this work, the LMD-2022 logset was enhanced with both normal and malicious traffic collected from various personal and virtual machine (VM) computing stations. Precisely, the already existing nine LM techniques were re-executed multiple times and populated with six more up-to-date state-of-the-art LM techniques, which correspond to Common Vulnerabilities and Exposures (CVEs) IDs issued from 2020 until today. As shown in the highlighted box that follows, , the added attacks (those having an asterisk affixed) include * *Log4Shell* * , * *Follina* * , * *Windows Spooler Privilege Escalation* * , * *SMBGhost* * , * *SMBleed* * , and * *Zerologon* * , each of them executed multiple times.
+~~For the needs of this work~~, the LMD-2022 logset was enhanced with both normal and malicious traffic collected from various personal and virtual machine (VM) computing stations. Precisely, the already existing nine LM techniques were re-executed multiple times and populated with six more up-to-date state-of-the-art LM techniques, which correspond to Common Vulnerabilities and Exposures (CVEs) IDs issued from 2020 until today. As shown in the highlighted box that follows, , the added attacks (those having an asterisk affixed) include * *Log4Shell* * , * *Follina* * , * *Windows Spooler Privilege Escalation* * , * *SMBGhost* * , * *SMBleed* * , and * *Zerologon* * , each of them executed multiple times.
 
 		- ms17-010 **CVE-2017-0148 (EoRS)**
 		- EternalBlue **CVE-2017-0144 & EoRS**
@@ -29,3 +29,5 @@ For the needs of this work, the LMD-2022 logset was enhanced with both normal an
 		- SMBGhost **CVE-2020-0796 & EoRS**
 		- SMBleed **CVE-2020-1206 & EoRS**
 		- Zerologon **CVE-2020-1472 & EoRS**
+
+The resulted LMD-2023 dataset, which is used in the context of ~~this work~~, comprises a full set of 1,752,890 log samples (EventIDs). LMD-2023 is offered in both CSV and Sysmon's generic \textit{EVTX} (raw .xml data) formats. The CSV file contains 93 features, and it was produced through the use of the ETCExp tool described in subsection~\ref{S:ETCExp:Dataset}. The 16 distinct EventIDs (out of the total 27 presented in Sysmon's manual \cite{russinovich2021sysmon}) identified by the ETCExp when parsing the corresponding EVTX file are included in Table~\ref{T:sysmon:eventids}. Note that the rest 11 Sysmon EventIDs, such as EventID\_6 (Driver loaded), Event\_8 (CreateRemoteThread) etc., are not present in LMD-2023 due to the nature of the implemented EoRS and EoHT techniques.
