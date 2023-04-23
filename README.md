@@ -7,7 +7,7 @@ LM Datasets (LMD) is the first, to our knowledge, EVTX origined dataset and curr
 The **2022 LMD version (LMD-2022)** incorporates normal and malicious traffic logs originated from the execution of nine state-of-the-art LM techniques, including four variants of the so-called * *Exploitation of Remote Services* * LM methodology and five equivalents * *credential exploitation techniques* * . The attacks were recorded under the MS Windows Domain testbed presented in **https://doi.org/10.3390/app12157746**. Specifically, the nine assaults range from the execution of the legacy Exploitation of Remote Services techniques via the * *ms17-010* * , * *EternalBlue* * and * *Bluekeep* * Windows vulnerabilities, to the more advanced deployment of the * *WannaCry* * malware and more elevated ones, including * *Pass the Hash (PtH)* * , * *Pass the Ticket (PtT)* * , * *Golden Ticket (GT)* * , * *Silver Ticket (ST)* * and credential exploitation with * *LaZagne Project tool* * .
 
 As shown in the highlighted box that follows, the LMD-2022 corpus comprises four subsets that were thoroughly presented in **https://doi.org/10.3390/app12157746** , namely * *Normal* *, * *NormalVsMalicious01* * , * *NormalVsMalicious02* * , and * *FullSet* *. Specifically, the * *Normal* * subset incorporates logs related to legitimate network traffic that were collected prior and during the execution of nine executed LM techniques, namely * *Exploitation of Remote Services (EoRS)* * (four variants of EoRS techniques) and * *Exploitation of Hashing Techniques (EoHT)* * (five variants of EoHT techniques). More precisely, * *NormalVsMalicious01* * set of logs encloses the traffic that was captured before, during and upon termination of the * *Exploitation of Remote Services (ERS)* * attacks category, while * *NormalVsMalicious02* * comprises logs collected during the execution of the five aforesaid distinct credentials exploitation techniques. Both, * *NormalVsMalicious01* * and * *NormalVsMalicious02* * are mixed with normal traffic logs respectively. Finally, * *FullSet* * is the fusion of the three aforesaid distinct subsets.
-
+		**LMD-2022 Contents:**
 		- Normal 80,000 (Legitimate network traffic (LNT))
 		- NormalVsMalicious01 290,000 (LNT, EoRS (ms17-010, EternalBlue, Bluekeep, WannaCry))
 		- NormalVsMalicious02 415,000 (LNT, EoHT (PtH, PtT, GT, ST [via Mimikatz], LaZagne Project))
@@ -30,4 +30,31 @@ For the need of the work that is entitled * *On the Detection of Lateral Movemen
 		- SMBleed **CVE-2020-1206 & EoRS**
 		- Zerologon **CVE-2020-1472 & EoRS**
 
-The resulted LMD-2023 dataset, which is used in the context of the aforementioned work, comprises a full set of 1,752,890 log samples (EventIDs). LMD-2023 is offered in both CSV and Sysmon's generic EVTX (raw .xml data) formats. The CSV file contains 93 features extracted with the ETCExp which is available in * *[https://github.com/ChristosSmiliotopoulos/evtx_To_CSV_ExportTool]* *. The 16 distinct EventIDs (out of the total 27 presented in Sysmon's manual \cite{russinovich2021sysmon}) identified by the ETCExp when parsing the corresponding EVTX file are included in Table~\ref{T:sysmon:eventids}. Note that the rest 11 Sysmon EventIDs, such as EventID\_6 (Driver loaded), Event\_8 (CreateRemoteThread) etc., are not present in LMD-2023 due to the nature of the implemented EoRS and EoHT techniques.
+The resulted LMD-2023 dataset, which is used in the context of the aforementioned work, comprises a full set of 1,752,890 log samples (EventIDs). LMD-2023 is offered in both CSV and Sysmon's generic EVTX (raw .xml data) formats. The CSV file contains 93 features extracted with the ETCExp which is available in * *[https://github.com/ChristosSmiliotopoulos/evtx_To_CSV_ExportTool]* *. 16 distinct EventIDs (out of the total 27 presented in Sysmon's manual * *[https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon]* *) are identified within LMD-2023. Note that the rest 11 Sysmon EventIDs, such as EventID_6 (Driver loaded), Event_8 (CreateRemoteThread) etc., are not present in LMD-2023 due to the nature of the implemented EoRS and EoHT techniques. The analysis of the included in LMD-2023 Sysmon EventIDs are presented as follows:
+
+		- EventID 1:Process creation \\
+		- EventID 2:A process changed a file creation time \\
+		- EventID 3:Network connection \\
+		- EventID 4:Sysmon service state changed\\
+		- EventID 5:Process terminated \\
+		- EventID 7:Image loaded \\
+		- EventID 10:ProcessAccess \\
+		- EventID 11:FileCreate \\
+		- EventID 12:RegistryEvent (Object create and delete) \\
+		- EventID 13:RegistryEvent (Value Set) \\
+		- EventID 16:ServiceConfigurationChange \\
+		- EventID 17:PipeEvent (Pipe Created) \\
+		- EventID 18:PipeEvent (Pipe Connected)\\
+		- EventID 22:DNSEvent (DNS query) \\
+		- EventID 23:FileDelete (File Delete archived)* \\
+		- EventID 255:EventID 255: Error* \\
+
+
+The contents of the LMD-2023 dataset is presented in the highlighted box below. It should be noted that three different versions (considering the number of each dataset's samples) are included as follows:
+
+		**LMD-2023 Contents:**
+		- LMD-2023 (1.75M Elements)
+		- LMD-2023 (1.87M Elements)
+		- LMD-2023 (2.31M Elements)
+		
+**Each version of the LMD-2023 dataset encloses a raw unmodified version, the labelled equivalent and three different subsets each including Normal, EoRS and EoHT traffic respectively.**
