@@ -56,5 +56,9 @@ The contents of the LMD-2023 dataset is presented in the highlighted box below. 
 		- LMD-2023 (1.75M Elements)
 		- LMD-2023 (1.87M Elements)
 		- LMD-2023 (2.31M Elements)
+
+The LMD-2023 dataset, was evaluated against the metrics outlined in **"Soukup, D., Uhříček, D., Vašata, D., Čejka, T. (2024). Machine Learning Metrics for Network Datasets Evaluation. In: Meyer, N., Grocholewska-Czuryło, A. (eds) ICT Systems Security and Privacy Protection. SEC 2023. IFIP Advances in Information and Communication Technology, vol 679. Springer, Cham. https://doi.org/10.1007/978-3-031-56326-3_22"**, demonstrated robust quality. Specifically, it achieved a redundancy score of **0.18** on the **M1 Redundancy metric**, indicating a minimal level of duplicate or highly similar records. Moreover, the evaluation process reached **a very good similarity score of approximately 42%**, revealing the dataset's **eligibility** for ML experiment. The reader is invited to consult the work in for further information. 
+
+![image](https://github.com/user-attachments/assets/5b6b442b-120d-4f75-b84c-1f0fe81b7b26)
 		
 **Each version of the LMD-2023 dataset encloses a raw unmodified version, the labelled equivalent and three different subsets each including Normal, EoRS and EoHT traffic respectively.**
